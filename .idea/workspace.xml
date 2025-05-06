@@ -5,54 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d35d29b-27bf-49d2-8265-5889525dbd07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.jpb/jpb-settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/AgeRange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/AuditLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/Consumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/ConsumerPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/ConsumerPointHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/Credential.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/DashboardUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/PointEarnConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/PointHistoryCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/PointHistoryStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/PointSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/PointTier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/RangeLimit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/Reward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/RewardCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/RewardGenderLimition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/RewardPrice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/RewardRedemptionHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/SubMerchant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/SuperMerchant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/lib/Base.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/lib/PrimaryKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/AgeRangeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/AuditLogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/ConsumerPointHistoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/ConsumerPointRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/ConsumerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/CredentialRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/DashboardUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/GenderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/PointEarnConfigRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/PointHistoryCategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/PointHistoryStatusRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/PointSystemRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/PointTierRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RangeLimitRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RewardCategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RewardGenderLimitionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RewardPriceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RewardRedemptionHistoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RewardRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/SubMerchantRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/SuperMerchantRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/dto/DashboardUserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/validation/annotation/NotDuplicate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/validation/annotation/PasswordMatches.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/validation/implementation/NotDuplicateValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/validation/implementation/PasswordMatchesValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/MymarketingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/MymarketingApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/controller/HealthCheckController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/AgeRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/AgeRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/AuditLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/AuditLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/ConsumerPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/ConsumerPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/ConsumerPointHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/ConsumerPointHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/Credential.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/Credential.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/DashboardUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/DashboardUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/Gender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/PointEarnConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/PointEarnConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/PointHistoryCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/PointHistoryCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/PointHistoryStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/PointHistoryStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/PointSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/PointSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/PointTier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/PointTier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/RangeLimit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/RangeLimit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/Reward.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/Reward.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/RewardCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/RewardCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/RewardGenderLimition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/RewardGenderLimition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/RewardPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/RewardPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/RewardRedemptionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/RewardRedemptionHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/SubMerchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/SubMerchant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/database/SuperMerchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/SuperMerchant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/AgeRangeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/AgeRangeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/AuditLogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/AuditLogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/ConsumerPointHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/ConsumerPointHistoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/ConsumerPointRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/ConsumerPointRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/ConsumerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/ConsumerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/CredentialRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/CredentialRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/DashboardUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/DashboardUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/GenderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/GenderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/PointEarnConfigRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/PointEarnConfigRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/PointHistoryCategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/PointHistoryCategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/PointHistoryStatusRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/PointHistoryStatusRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/PointSystemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/PointSystemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/PointTierRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/PointTierRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RangeLimitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RangeLimitRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RewardCategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RewardCategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RewardGenderLimitionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RewardGenderLimitionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RewardPriceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RewardPriceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RewardRedemptionHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RewardRedemptionHistoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RewardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/RewardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/SubMerchantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/SubMerchantRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/SuperMerchantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/SuperMerchantRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,9 +63,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="com.haulmont.jpb.JpaEntity" />
         <option value="com.haulmont.jpb.JpaRepository" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -104,6 +106,7 @@
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.codeium.enabled": "true",
@@ -116,7 +119,8 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "com.haulmont.jpb.viewMode",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.splitter.proportion": "0.27624872",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -168,7 +172,8 @@
       <option name="presentableId" value="Default" />
       <updated>1746420854937</updated>
       <workItem from="1746420856003" duration="9679000" />
-      <workItem from="1746430584330" duration="5201000" />
+      <workItem from="1746430584330" duration="6044000" />
+      <workItem from="1746519112752" duration="4829000" />
     </task>
     <servers />
   </component>

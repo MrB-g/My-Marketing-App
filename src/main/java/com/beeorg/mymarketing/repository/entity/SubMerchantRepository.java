@@ -1,6 +1,6 @@
 package com.beeorg.mymarketing.repository.entity;
 
-import com.beeorg.mymarketing.entity.database.SubMerchant;
+import com.beeorg.mymarketing.entity.SubMerchant;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

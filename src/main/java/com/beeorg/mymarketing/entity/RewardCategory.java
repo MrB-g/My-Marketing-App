@@ -1,4 +1,4 @@
-package com.beeorg.mymarketing.entity.database;
+package com.beeorg.mymarketing.entity;
 
 import com.beeorg.mymarketing.entity.lib.Base;
 import jakarta.persistence.*;

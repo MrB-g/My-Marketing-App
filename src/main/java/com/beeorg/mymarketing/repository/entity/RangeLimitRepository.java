@@ -1,6 +1,6 @@
 package com.beeorg.mymarketing.repository.entity;
 
-import com.beeorg.mymarketing.entity.database.RangeLimit;
+import com.beeorg.mymarketing.entity.RangeLimit;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

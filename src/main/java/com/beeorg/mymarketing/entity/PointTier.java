@@ -1,4 +1,4 @@
-package com.beeorg.mymarketing.entity.database;
+package com.beeorg.mymarketing.entity;
 
 import com.beeorg.mymarketing.entity.lib.Base;
 import jakarta.persistence.*;
@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
-import java.math.BigDecimal;
 import java.util.Set;
 
 @Getter
@@ -17,23 +16,33 @@ import java.util.Set;
 @SuperBuilder
 @NoArgsConstructor
 @Entity
-@Table(name = "point_earn_config", schema = "my_marketing")
+@Table(name = "point_tier", schema = "my_marketing")
 @AttributeOverrides({@AttributeOverride(name = "createdBy", column = @Column(name = "created_by", nullable = false, length = 50)), @AttributeOverride(name = "updatedBy", column = @Column(name = "updated_by", nullable = false, length = 50))})
-public class PointEarnConfig extends Base {
+public class PointTier extends Base {
     @Size(max = 100)
     @NotNull
     @Column(name = "name", nullable = false, length = 100)
     private String name;
 
-    @NotNull
-    @Column(name = "transaction_amount", nullable = false, precision = 20, scale = 2)
-    private BigDecimal transactionAmount;
+    @Column(name = "from_point")
+    private Integer fromPoint;
 
-    @NotNull
-    @Column(name = "no_of_points", nullable = false)
-    private Integer noOfPoints;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "from_point_limit_id")
+    private RangeLimit fromPointLimit;
 
-    @OneToMany(mappedBy = "pointEarnConfig")
-    private Set<SubMerchant> subMerchants;
+    @Column(name = "to_point")
+    private Integer toPoint;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "to_point_limit_id")
+    private RangeLimit toPointLimit;
+
+    @Size(max = 100)
+    @Column(name = "icon_url", length = 100)
+    private String iconUrl;
+
+    @OneToMany(mappedBy = "pointTier")
+    private Set<SuperMerchant> superMerchants;
 
 }

@@ -1,8 +1,7 @@
-package com.beeorg.mymarketing.entity.database;
+package com.beeorg.mymarketing.entity;
 
 import com.beeorg.mymarketing.entity.lib.Base;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -15,14 +14,24 @@ import java.util.Set;
 @SuperBuilder
 @NoArgsConstructor
 @Entity
-@Table(name = "reward_price", schema = "my_marketing")
+@Table(name = "age_range", schema = "my_marketing")
 @AttributeOverrides({@AttributeOverride(name = "createdBy", column = @Column(name = "created_by", nullable = false, length = 50)), @AttributeOverride(name = "updatedBy", column = @Column(name = "updated_by", nullable = false, length = 50))})
-public class RewardPrice extends Base {
-    @NotNull
-    @Column(name = "total_points", nullable = false)
-    private Integer totalPoints;
+public class AgeRange extends Base {
+    @Column(name = "from_age")
+    private Integer fromAge;
 
-    @OneToMany(mappedBy = "rewardPrice")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "from_age_limit_id")
+    private RangeLimit fromAgeLimit;
+
+    @Column(name = "to_age")
+    private Integer toAge;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "to_age_limit_id")
+    private RangeLimit toAgeLimit;
+
+    @OneToMany(mappedBy = "ageRange")
     private Set<Reward> rewards;
 
 }

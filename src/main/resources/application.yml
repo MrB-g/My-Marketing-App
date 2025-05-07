@@ -29,3 +29,5 @@ spring:
     jpa:
       repositories:
         enabled: true
+  jackson:
+    default-property-inclusion: non_null

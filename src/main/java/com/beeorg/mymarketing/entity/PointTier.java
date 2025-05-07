@@ -17,7 +17,12 @@ import java.util.Set;
 @NoArgsConstructor
 @Entity
 @Table(name = "point_tier", schema = "my_marketing")
-@AttributeOverrides({@AttributeOverride(name = "createdBy", column = @Column(name = "created_by", nullable = false, length = 50)), @AttributeOverride(name = "updatedBy", column = @Column(name = "updated_by", nullable = false, length = 50))})
+@AttributeOverrides({
+        @AttributeOverride(name = "createdAt", column = @Column(name = "created_at")),
+        @AttributeOverride(name = "createdBy", column = @Column(name = "created_by", length = 50)),
+        @AttributeOverride(name = "updatedAt", column = @Column(name = "updated_at")),
+        @AttributeOverride(name = "updatedBy", column = @Column(name = "updated_by", length = 50))
+})
 public class PointTier extends Base {
     @Size(max = 100)
     @NotNull

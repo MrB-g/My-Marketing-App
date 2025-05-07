@@ -12,7 +12,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface NotDuplicate {
 
-    String message() default "Duplicate value";
+    String message() default "Provided value already exists";
 
     Class<?>[] groups() default {};
 

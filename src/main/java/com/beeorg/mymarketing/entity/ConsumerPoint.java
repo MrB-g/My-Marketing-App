@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -33,10 +33,10 @@ public class ConsumerPoint extends PrimaryKey {
 
     @NotNull
     @Column(name = "expired_at", nullable = false)
-    private Instant expiredAt;
+    private LocalDateTime expiredAt;
 
     @NotNull
     @Column(name = "earned_at", nullable = false)
-    private Instant earnedAt;
+    private LocalDateTime earnedAt;
 
 }

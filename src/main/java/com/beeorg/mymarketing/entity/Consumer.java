@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
-import java.time.Instant;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Getter
@@ -40,7 +40,7 @@ public class Consumer extends PrimaryKey {
 
     @NotNull
     @Column(name = "registered_at", nullable = false)
-    private Instant registeredAt;
+    private LocalDateTime registeredAt;
 
     @OneToMany(mappedBy = "consumer")
     private Set<ConsumerPoint> consumerPoints;

@@ -17,5 +17,5 @@ public class PrimaryKey {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", insertable = false, updatable = false)
-    private int id;
+    private Integer id;
 }

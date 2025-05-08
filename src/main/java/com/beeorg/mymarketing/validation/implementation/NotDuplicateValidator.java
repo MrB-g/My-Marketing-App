@@ -7,11 +7,12 @@ import jakarta.persistence.Query;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
-public class NotDuplicateValidator implements ConstraintValidator<NotDuplicate, String> {
+public class NotDuplicateValidator implements ConstraintValidator<NotDuplicate, Object> {
 
     private final EntityManager entityManager;
     private String column;
     private String table;
+    private boolean reverse;
 
     public NotDuplicateValidator(EntityManager entityManager) {
         this.entityManager = entityManager;
@@ -21,10 +22,11 @@ public class NotDuplicateValidator implements ConstraintValidator<NotDuplicate, 
     public void initialize(NotDuplicate constraintAnnotation) {
         this.column = constraintAnnotation.column();
         this.table = constraintAnnotation.table();
+        this.reverse = constraintAnnotation.reverse();
     }
 
     @Override
-    public boolean isValid(String value, ConstraintValidatorContext context) {
+    public boolean isValid(Object value, ConstraintValidatorContext context) {
         if (value == null) return true;
         try {
             if (this.column == null) {
@@ -38,7 +40,15 @@ public class NotDuplicateValidator implements ConstraintValidator<NotDuplicate, 
             String sql = String.format("SELECT count(*) FROM %s WHERE %s = :value", this.table, this.column);
             Query query = entityManager.createNativeQuery(sql).setParameter("value", value);
             long count = (Long) query.getSingleResult();
-            return count == 0;
+            if (this.reverse) {
+                if (count == 0) {
+                    CustomConstraintValidatorContext.modify("Provided value doesn't exist", "", context);
+                    return false;
+                }
+                return true;
+            } else {
+                return count == 0;
+            }
         } catch (Exception e) {
             return false;
         }

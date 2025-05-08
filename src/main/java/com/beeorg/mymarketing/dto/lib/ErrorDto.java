@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class ValidationDto {
+public class ErrorDto {
 
     private String field;
 

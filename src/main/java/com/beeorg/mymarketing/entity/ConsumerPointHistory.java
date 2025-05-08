@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -38,6 +38,5 @@ public class ConsumerPointHistory extends PrimaryKey {
 
     @NotNull
     @Column(name = "date_time", nullable = false)
-    private Instant dateTime;
-
+    private LocalDateTime dateTime;
 }

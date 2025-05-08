@@ -40,11 +40,24 @@ public class PasswordMatchesValidator implements ConstraintValidator<PasswordMat
 
     private String getFieldValue(Object o, String fieldName) {
         try {
-            Field field = o.getClass().getDeclaredField(fieldName);
-            field.setAccessible(true);
+            Field field = getField(o, fieldName);
             return field.get(o).toString();
         } catch (Exception e) {
             return null;
         }
+    }
+
+    public static Field getField(Object o, String fieldName) throws NoSuchFieldException {
+        Class<?> clazz = o.getClass();
+        while (clazz != null) {
+            try {
+                Field field = clazz.getDeclaredField(fieldName);
+                field.setAccessible(true);
+                return field;
+            } catch (NoSuchFieldException e) {
+                clazz = clazz.getSuperclass();
+            }
+        }
+        throw new NoSuchFieldException("Field '" + fieldName + "' not found in class hierarchy");
     }
 }

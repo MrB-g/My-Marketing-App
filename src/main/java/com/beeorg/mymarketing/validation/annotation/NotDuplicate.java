@@ -21,4 +21,6 @@ public @interface NotDuplicate {
     String column();
 
     String table();
+
+    boolean reverse() default false;
 }

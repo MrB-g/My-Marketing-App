@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -28,7 +28,7 @@ public class AuditLog extends PrimaryKey {
 
     @NotNull
     @Column(name = "performed_at", nullable = false)
-    private Instant performedAt;
+    private LocalDateTime performedAt;
 
     @Size(max = 100)
     @NotNull
@@ -39,4 +39,9 @@ public class AuditLog extends PrimaryKey {
     @NotNull
     @Column(name = "function_name", nullable = false, length = 100)
     private String functionName;
+
+    @Size(max = 100)
+    @NotNull
+    @Column(name = "performed_by", nullable = false, length = 100)
+    private String performedBy;
 }

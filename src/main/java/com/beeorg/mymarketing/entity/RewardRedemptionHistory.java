@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -29,10 +29,10 @@ public class RewardRedemptionHistory extends PrimaryKey {
 
     @NotNull
     @Column(name = "expired_at", nullable = false)
-    private Instant expiredAt;
+    private LocalDateTime expiredAt;
 
     @NotNull
     @Column(name = "redeemed_at", nullable = false)
-    private Instant redeemedAt;
+    private LocalDateTime redeemedAt;
 
 }

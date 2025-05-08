@@ -28,6 +28,13 @@ public class AuditLogService implements com.beeorg.mymarketing.service.AuditLogS
     }
 
     @Override
+    public AuditLogDto update(AuditLogDto audit) {
+        AuditLog auditLogEntity = auditLogEntityBuilderService.build(audit);
+        auditLogRepository.update(auditLogEntity);
+        return audit;
+    }
+
+    @Override
     public List<AuditLogDto> read() {
         List<AuditLog> auditLogs = auditLogRepository.findAll();
         return auditLogs.stream().map(auditLogEntityBuilderService::reverse).toList();

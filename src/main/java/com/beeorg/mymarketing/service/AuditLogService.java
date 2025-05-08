@@ -10,6 +10,8 @@ public interface AuditLogService {
 
     AuditLogDto create(AuditLogDto audit);
 
+    AuditLogDto update(AuditLogDto audit);
+
     List<AuditLogDto> read();
 
     AuditLogDto readDetail(int id);

@@ -1,6 +1,7 @@
 package com.beeorg.mymarketing.repository.entity;
 
 import com.beeorg.mymarketing.entity.AuditLog;
+import com.beeorg.mymarketing.entity.DashboardUser;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
@@ -19,4 +20,9 @@ public interface AuditLogRepository extends JpaRepository<AuditLog, Integer>, Jp
             nativeQuery = true
     )
     void insert(String originalData, String modifiedData, String endPoint, String functionName);
+
+    @Modifying
+    @Transactional
+    @Query("UPDATE AuditLog a SET a.modifiedData=:#{#audit.modifiedData} WHERE a.id = :#{#audit.id}")
+    void update(@Param("user") AuditLog audit);
 }

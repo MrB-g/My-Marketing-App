@@ -1,7 +1,5 @@
 package com.beeorg.mymarketing.repository.entity;
 
-import com.beeorg.mymarketing.dto.DashboardUserDto;
-import com.beeorg.mymarketing.dto.DashboardUserUpdateDto;
 import com.beeorg.mymarketing.entity.DashboardUser;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;

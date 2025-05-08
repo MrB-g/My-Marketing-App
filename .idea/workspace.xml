@@ -5,39 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d35d29b-27bf-49d2-8265-5889525dbd07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/aspect/dashboard/AuditLogAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/controller/api/dashboard/BaseEndpoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/dto/AuditLogDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/dto/DashboardUserUpdateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/AuditLogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/builder/AuditLogEntityBuilderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/builder/BaseBuilderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/AuditLogEntityBuilderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/AuditLogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/controller/api/dashboard/DashboardUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/controller/api/dashboard/DashboardUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/controller/api/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/controller/api/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/dto/http/ResponseBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/dto/http/ResponseBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/dto/lib/ExceptionDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/dto/lib/ValidationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/dto/lib/ErrorDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/AuditLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/AuditLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/ConsumerPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/ConsumerPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/ConsumerPointHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/ConsumerPointHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/RewardRedemptionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/RewardRedemptionHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/lib/PrimaryKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/lib/PrimaryKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/AuditLogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/AuditLogRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/DashboardUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/DashboardUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/DashboardUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/DashboardUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/builder/DashboardUserEntityBuilderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/builder/DashboardUserEntityBuilderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/builder/ErrorValidationDtoBuilderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/builder/ErrorValidationDtoBuilderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/DashboardUserEntityBuilderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/DashboardUserEntityBuilderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/DashboardUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/DashboardUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/ErrorValidationDtoBuilderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/ErrorValidationDtoBuilderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/validation/annotation/NotDuplicate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/validation/annotation/NotDuplicate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/validation/implementation/NotDuplicateValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/validation/implementation/NotDuplicateValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/validation/implementation/PasswordMatchesValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/validation/implementation/PasswordMatchesValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/AuditLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/AuditLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/AuditLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/AuditLogService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +136,7 @@
       <workItem from="1746430584330" duration="6044000" />
       <workItem from="1746519112752" duration="4829000" />
       <workItem from="1746589624229" duration="19470000" />
-      <workItem from="1746671538749" duration="18771000" />
+      <workItem from="1746671538749" duration="19944000" />
     </task>
     <servers />
   </component>

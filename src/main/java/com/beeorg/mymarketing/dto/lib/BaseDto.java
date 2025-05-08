@@ -1,15 +1,17 @@
 package com.beeorg.mymarketing.dto.lib;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
 
 @Data
 @SuperBuilder
+@NoArgsConstructor
 public class BaseDto {
 
-    private int id;
+    private Integer id;
 
     private LocalDateTime createdAt;
 

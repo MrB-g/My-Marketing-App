@@ -1,8 +1,9 @@
 package com.beeorg.mymarketing.controller.api.dashboard;
 
 import com.beeorg.mymarketing.dto.DashboardUserDto;
+import com.beeorg.mymarketing.dto.http.ResponseBodyStatusEnum;
 import com.beeorg.mymarketing.dto.lib.ValidationDto;
-import com.beeorg.mymarketing.dto.http.ErrorResponseBody;
+import com.beeorg.mymarketing.dto.http.ResponseBody;
 import com.beeorg.mymarketing.service.DashboardUserService;
 import com.beeorg.mymarketing.service.builder.ErrorValidationDtoBuilderService;
 import jakarta.validation.Valid;
@@ -32,16 +33,15 @@ public class DashboardUserController {
     public ResponseEntity<?> create(@Valid @RequestBody DashboardUserDto user, Errors validationErrors) {
         if (validationErrors.hasErrors()) {
             List<ValidationDto> errors = errorValidationDtoBuilderService.buildValidationDtoList(validationErrors);
-            ErrorResponseBody<List<ValidationDto>> errorResponseBody = new ErrorResponseBody<>(true, errors);
-            return ResponseEntity.badRequest().body(errorResponseBody);
+            return ResponseEntity.badRequest().body(new ResponseBody<>(ResponseBodyStatusEnum.ERROR, errors));
         }
         DashboardUserDto responseDashboardUser = dashboardUserService.create(user);
-        return ResponseEntity.ok(responseDashboardUser);
+        return ResponseEntity.ok(new ResponseBody<>(ResponseBodyStatusEnum.SUCCESS, responseDashboardUser));
     }
 
     @GetMapping
     public ResponseEntity<?> read() {
         List<DashboardUserDto> users = dashboardUserService.read();
-        return ResponseEntity.ok(users);
+        return ResponseEntity.ok(new ResponseBody<>(ResponseBodyStatusEnum.SUCCESS, users));
     }
 }

@@ -3,7 +3,7 @@ package com.beeorg.mymarketing.controller.api.dashboard;
 import com.beeorg.mymarketing.dto.DashboardUserDto;
 import com.beeorg.mymarketing.dto.DashboardUserUpdateDto;
 import com.beeorg.mymarketing.dto.http.ResponseBody;
-import com.beeorg.mymarketing.dto.http.ResponseBodyStatusEnum;
+import com.beeorg.mymarketing.dto.enums.ResponseBodyStatusEnum;
 import com.beeorg.mymarketing.dto.lib.ErrorDto;
 import com.beeorg.mymarketing.service.DashboardUserService;
 import com.beeorg.mymarketing.service.builder.ErrorValidationDtoBuilderService;
@@ -22,12 +22,15 @@ public class DashboardUserController {
 
     private final DashboardUserService dashboardUserService;
 
-    public DashboardUserController(ErrorValidationDtoBuilderService errorValidationDtoBuilderService, DashboardUserService dashboardUserService) {
+    public DashboardUserController(
+            ErrorValidationDtoBuilderService errorValidationDtoBuilderService,
+            DashboardUserService dashboardUserService
+    ) {
         this.errorValidationDtoBuilderService = errorValidationDtoBuilderService;
         this.dashboardUserService = dashboardUserService;
     }
 
-    @PostMapping("/v1/user/")
+    @PostMapping("/v1/user")
     public ResponseEntity<?> create(@Valid @RequestBody DashboardUserDto user, Errors validationErrors) {
         if (validationErrors.hasErrors()) {
             List<ErrorDto> errors = errorValidationDtoBuilderService.buildValidationDtoList(validationErrors);
@@ -37,7 +40,7 @@ public class DashboardUserController {
         return ResponseEntity.ok(new ResponseBody<>(ResponseBodyStatusEnum.SUCCESS, responseDashboardUser));
     }
 
-    @PutMapping("/v1/user/")
+    @PutMapping("/v1/user")
     public ResponseEntity<?> update(@Valid @RequestBody DashboardUserUpdateDto user, Errors validationErrors) {
         if (validationErrors.hasErrors()) {
             List<ErrorDto> errors = errorValidationDtoBuilderService.buildValidationDtoList(validationErrors);

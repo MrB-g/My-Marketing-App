@@ -1,7 +1,6 @@
 package com.beeorg.mymarketing.service;
 
 import com.beeorg.mymarketing.dto.DashboardUserDto;
-import com.beeorg.mymarketing.dto.DashboardUserUpdateDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

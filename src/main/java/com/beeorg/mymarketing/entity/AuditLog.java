@@ -1,9 +1,8 @@
 package com.beeorg.mymarketing.entity;
 
+import com.beeorg.mymarketing.dto.enums.DefaultUserEnum;
 import com.beeorg.mymarketing.entity.lib.PrimaryKey;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
@@ -27,7 +26,7 @@ public class AuditLog extends PrimaryKey {
     private String modifiedData;
 
     @NotNull
-    @Column(name = "performed_at", nullable = false)
+    @Column(name = "performed_at", nullable = false, updatable = false)
     private LocalDateTime performedAt;
 
     @Size(max = 100)
@@ -42,6 +41,12 @@ public class AuditLog extends PrimaryKey {
 
     @Size(max = 100)
     @NotNull
-    @Column(name = "performed_by", nullable = false, length = 100)
+    @Column(name = "performed_by", nullable = false, length = 100, updatable = false)
     private String performedBy;
+
+    @PrePersist
+    public void onCreate() {
+        this.performedAt = LocalDateTime.now();
+        this.performedBy = DefaultUserEnum.SYSTEM.name();
+    }
 }

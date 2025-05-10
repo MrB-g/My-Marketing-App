@@ -1,5 +1,6 @@
 package com.beeorg.mymarketing.dto.http;
 
+import com.beeorg.mymarketing.dto.enums.ResponseBodyStatusEnum;
 import lombok.Data;
 
 import java.util.List;

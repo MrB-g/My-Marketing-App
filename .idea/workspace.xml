@@ -4,12 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d35d29b-27bf-49d2-8265-5889525dbd07" name="Changes" comment="">
+    <list default="true" id="cfea85c2-e239-4269-ab14-05fe9867f01a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/dto/enums/DefaultUserEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/builder/UpdateBuilderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.jpb/jpb-settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/controller/api/dashboard/DashboardUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/controller/api/dashboard/DashboardUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/controller/api/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/controller/api/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/dto/DashboardUserUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/dto/DashboardUserUpdateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/dto/http/ResponseBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/dto/http/ResponseBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/dto/http/ResponseBodyStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/dto/enums/ResponseBodyStatusEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/AuditLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/AuditLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/lib/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/entity/lib/Base.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/AuditLogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/AuditLogRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/DashboardUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/repository/entity/DashboardUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/AuditLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/AuditLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/DashboardUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/DashboardUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/builder/AuditLogEntityBuilderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/builder/AuditLogEntityBuilderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/builder/DashboardUserEntityBuilderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/builder/DashboardUserEntityBuilderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/AuditLogEntityBuilderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/AuditLogEntityBuilderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/AuditLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/AuditLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/DashboardUserEntityBuilderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/DashboardUserEntityBuilderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/DashboardUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/beeorg/mymarketing/service/implementation/DashboardUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,140 +35,65 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="com.haulmont.jpb.JpaEntity" />
-        <option value="com.haulmont.jpb.JpaRepository" />
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JpbToolWindowState">
-    <option name="isToolWindowVisible" value="false" />
-  </component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MrB-g"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://MrB-g@github.com/MrB-g/My-Marketing-App.git",
+    "accountId": "13bf9b33-5495-40ce-bf80-352ca7184d58"
+  }
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
-  <component name="ProjectId" id="2wf7cEXnRnxau4Rnld5oJmkKkIA" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2wtO5awRmYSlX9t7HP9lNbLCiF5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "Application.MymarketingApplication.executor": "Debug",
+    "Maven.mymarketing [clean].executor": "Run",
+    "Maven.mymarketing [install].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.codeium.enabled": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "dev",
-    "last_opened_file_path": "D:/Learn/Projects/My-Marketing-App/src/main/java/com/beeorg/mymarketing/entity",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
+    "last_opened_file_path": "/Users/bbee/Project/My-Marketing-App",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "settings.editor.splitter.proportion": "0.27624872",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
+    "settings.editor.selected.configurable": "preferences.general"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Learn\Projects\My-Marketing-App\src\main\java\com\beeorg\mymarketing\entity" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.beeorg.mymarketing.service" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="My-Marketing-App" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="My-Marketing-App" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MymarketingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="mymarketing" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.beeorg.mymarketing.MymarketingApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7d35d29b-27bf-49d2-8265-5889525dbd07" name="Changes" comment="" />
-      <created>1746420854937</created>
+      <changelist id="cfea85c2-e239-4269-ab14-05fe9867f01a" name="Changes" comment="" />
+      <created>1730010294374</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1746420854937</updated>
-      <workItem from="1746420856003" duration="9679000" />
-      <workItem from="1746430584330" duration="6044000" />
-      <workItem from="1746519112752" duration="4829000" />
-      <workItem from="1746589624229" duration="19470000" />
-      <workItem from="1746671538749" duration="19944000" />
+      <updated>1730010294374</updated>
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo parentTag="org.springframework.validation.beanvalidation.SpringValidatorAdapter$ViolationObjectError" memberName="source" />
-        <PinnedItemInfo parentTag="com.beeorg.mymarketing.dto.DashboardUserDto" memberName="loginId" />
-      </pinned-members>
-    </pin-to-top-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

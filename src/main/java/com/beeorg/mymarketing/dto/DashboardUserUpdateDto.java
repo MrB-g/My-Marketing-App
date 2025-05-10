@@ -1,7 +1,7 @@
 package com.beeorg.mymarketing.dto;
 
 import com.beeorg.mymarketing.validation.annotation.NotDuplicate;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -13,7 +13,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 public class DashboardUserUpdateDto extends DashboardUserDto {
 
+    @NotNull(message = "Id is required")
     @NotDuplicate(column = "id", table = "dashboard_user", reverse = true)
-    @NotBlank(message = "Id is required")
     private Integer id;
 }

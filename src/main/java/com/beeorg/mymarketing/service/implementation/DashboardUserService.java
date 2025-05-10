@@ -1,7 +1,6 @@
 package com.beeorg.mymarketing.service.implementation;
 
 import com.beeorg.mymarketing.dto.DashboardUserDto;
-import com.beeorg.mymarketing.dto.DashboardUserUpdateDto;
 import com.beeorg.mymarketing.entity.DashboardUser;
 import com.beeorg.mymarketing.repository.entity.DashboardUserRepository;
 import com.beeorg.mymarketing.service.builder.DashboardUserEntityBuilderService;
@@ -17,22 +16,27 @@ public class DashboardUserService implements com.beeorg.mymarketing.service.Dash
 
     private final DashboardUserEntityBuilderService dashboardUserEntityBuilderService;
 
-    public DashboardUserService(DashboardUserRepository dashboardUserRepository, DashboardUserEntityBuilderService dashboardUserEntityBuilderService) {
+    public DashboardUserService(
+            DashboardUserRepository dashboardUserRepository,
+            DashboardUserEntityBuilderService dashboardUserEntityBuilderService
+    ) {
         this.dashboardUserRepository = dashboardUserRepository;
         this.dashboardUserEntityBuilderService = dashboardUserEntityBuilderService;
     }
 
     @Override
     public DashboardUserDto create(DashboardUserDto user) {
-        dashboardUserRepository.insert(user.getLoginId(), user.getPassword());
-        return user;
+        DashboardUser dashboardUser = dashboardUserEntityBuilderService.build(user);
+        DashboardUser savedUser = dashboardUserRepository.save(dashboardUser);
+        return dashboardUserEntityBuilderService.reverse(savedUser);
     }
 
     @Override
     public DashboardUserDto update(DashboardUserDto user) {
-        DashboardUser dashboardUser = dashboardUserEntityBuilderService.build(user);
-        dashboardUserRepository.update(dashboardUser);
-        return user;
+        DashboardUser dbUser = dashboardUserRepository.findById(user.getId()).get();
+        DashboardUser requestUser = dashboardUserEntityBuilderService.update(user, dbUser);
+        DashboardUser updateUser = dashboardUserRepository.save(requestUser);
+        return dashboardUserEntityBuilderService.reverse(updateUser);
     }
 
     @Override
@@ -51,6 +55,6 @@ public class DashboardUserService implements com.beeorg.mymarketing.service.Dash
     public DashboardUserDto delete(DashboardUserDto user) {
         DashboardUser dashboardUser = dashboardUserEntityBuilderService.build(user);
         dashboardUserRepository.delete(dashboardUser);
-        return dashboardUserEntityBuilderService.reverse(dashboardUser);
+        return user;
     }
 }

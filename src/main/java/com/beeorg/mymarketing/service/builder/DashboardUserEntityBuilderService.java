@@ -5,6 +5,8 @@ import com.beeorg.mymarketing.entity.DashboardUser;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface DashboardUserEntityBuilderService extends BaseBuilderService<DashboardUser, DashboardUserDto> {
+public interface DashboardUserEntityBuilderService extends
+        BaseBuilderService<DashboardUser, DashboardUserDto>,
+        UpdateBuilderService<DashboardUser, DashboardUserDto> {
 
 }

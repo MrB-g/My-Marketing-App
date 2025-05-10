@@ -18,6 +18,17 @@ public class DashboardUserEntityBuilderService implements com.beeorg.mymarketing
     }
 
     @Override
+    public DashboardUser update(DashboardUserDto requestData, DashboardUser dbData) {
+        return DashboardUser.builder()
+                .id(dbData.getId())
+                .loginId(requestData.getLoginId() != null ? requestData.getLoginId() : dbData.getLoginId())
+                .password(requestData.getPassword() != null ? requestData.getPassword() : dbData.getPassword())
+                .createdAt(dbData.getCreatedAt())
+                .createdBy(dbData.getUpdatedBy())
+                .build();
+    }
+
+    @Override
     public DashboardUserDto reverse(DashboardUser user) {
         return DashboardUserDto.builder()
                 .id(user.getId())

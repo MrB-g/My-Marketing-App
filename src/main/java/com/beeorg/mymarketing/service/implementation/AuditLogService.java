@@ -16,22 +16,27 @@ public class AuditLogService implements com.beeorg.mymarketing.service.AuditLogS
 
     private final AuditLogEntityBuilderService auditLogEntityBuilderService;
 
-    public AuditLogService(AuditLogRepository auditLogRepository, AuditLogEntityBuilderService auditLogEntityBuilderService) {
+    public AuditLogService(
+            AuditLogRepository auditLogRepository,
+            AuditLogEntityBuilderService auditLogEntityBuilderService
+    ) {
         this.auditLogRepository = auditLogRepository;
         this.auditLogEntityBuilderService = auditLogEntityBuilderService;
     }
 
     @Override
     public AuditLogDto create(AuditLogDto audit) {
-        auditLogRepository.insert(audit.getOriginalData(), audit.getModifiedData(), audit.getEndPoint(), audit.getFunctionName());
-        return audit;
+        AuditLog auditLogEntity = auditLogEntityBuilderService.build(audit);
+        AuditLog savedAuditLogEntity = auditLogRepository.save(auditLogEntity);
+        return auditLogEntityBuilderService.reverse(savedAuditLogEntity);
     }
 
     @Override
     public AuditLogDto update(AuditLogDto audit) {
-        AuditLog auditLogEntity = auditLogEntityBuilderService.build(audit);
-        auditLogRepository.update(auditLogEntity);
-        return audit;
+        AuditLog dbAuditLog = auditLogRepository.findById(audit.getId()).get();
+        AuditLog requestAuditLog = auditLogEntityBuilderService.update(audit, dbAuditLog);
+        AuditLog updatedAuditLog = auditLogRepository.save(requestAuditLog);
+        return auditLogEntityBuilderService.reverse(updatedAuditLog);
     }
 
     @Override

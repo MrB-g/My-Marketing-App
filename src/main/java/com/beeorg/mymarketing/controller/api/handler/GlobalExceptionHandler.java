@@ -1,6 +1,6 @@
 package com.beeorg.mymarketing.controller.api.handler;
 
-import com.beeorg.mymarketing.dto.http.ResponseBodyStatusEnum;
+import com.beeorg.mymarketing.dto.enums.ResponseBodyStatusEnum;
 import com.beeorg.mymarketing.dto.http.ResponseBody;
 import com.beeorg.mymarketing.dto.lib.ErrorDto;
 import org.springframework.http.HttpStatus;

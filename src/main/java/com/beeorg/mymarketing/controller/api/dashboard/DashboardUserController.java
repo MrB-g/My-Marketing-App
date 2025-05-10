@@ -1,74 +1,49 @@
 package com.beeorg.mymarketing.controller.api.dashboard;
 
 import com.beeorg.mymarketing.dto.DashboardUserDto;
+import com.beeorg.mymarketing.dto.DashboardUserReadDto;
 import com.beeorg.mymarketing.dto.DashboardUserUpdateDto;
-import com.beeorg.mymarketing.dto.http.ResponseBody;
-import com.beeorg.mymarketing.dto.enums.ResponseBodyStatusEnum;
-import com.beeorg.mymarketing.dto.lib.ErrorDto;
 import com.beeorg.mymarketing.service.DashboardUserService;
-import com.beeorg.mymarketing.service.builder.ErrorValidationDtoBuilderService;
+import com.beeorg.mymarketing.service.handler.CrudEndpointHandler;
+import com.beeorg.mymarketing.service.implementation.ResponseEntityBuilderService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @BaseEndpoint
 public class DashboardUserController {
 
-    private final ErrorValidationDtoBuilderService errorValidationDtoBuilderService;
-
     private final DashboardUserService dashboardUserService;
 
+    private final ResponseEntityBuilderService<DashboardUserDto> responseEntityBuilderService;
+
     public DashboardUserController(
-            ErrorValidationDtoBuilderService errorValidationDtoBuilderService,
-            DashboardUserService dashboardUserService
+            DashboardUserService dashboardUserService,
+            ResponseEntityBuilderService<DashboardUserDto> responseEntityBuilderService
     ) {
-        this.errorValidationDtoBuilderService = errorValidationDtoBuilderService;
         this.dashboardUserService = dashboardUserService;
+        this.responseEntityBuilderService = responseEntityBuilderService;
     }
 
     @PostMapping("/v1/user")
     public ResponseEntity<?> create(@Valid @RequestBody DashboardUserDto user, Errors validationErrors) {
-        if (validationErrors.hasErrors()) {
-            List<ErrorDto> errors = errorValidationDtoBuilderService.buildValidationDtoList(validationErrors);
-            return ResponseEntity.badRequest().body(new ResponseBody<>(ResponseBodyStatusEnum.ERROR, errors));
-        }
-        List<DashboardUserDto> responseDashboardUser = List.of(dashboardUserService.create(user));
-        return ResponseEntity.ok(new ResponseBody<>(ResponseBodyStatusEnum.SUCCESS, responseDashboardUser));
+        return CrudEndpointHandler.run(dashboardUserService::create, user, validationErrors, responseEntityBuilderService);
     }
 
     @PutMapping("/v1/user")
     public ResponseEntity<?> update(@Valid @RequestBody DashboardUserUpdateDto user, Errors validationErrors) {
-        if (validationErrors.hasErrors()) {
-            List<ErrorDto> errors = errorValidationDtoBuilderService.buildValidationDtoList(validationErrors);
-            return ResponseEntity.badRequest().body(new ResponseBody<>(ResponseBodyStatusEnum.ERROR, errors));
-        }
-        List<DashboardUserDto> responseDashboardUser = List.of(dashboardUserService.update(user));
-        return ResponseEntity.ok(new ResponseBody<>(ResponseBodyStatusEnum.SUCCESS, responseDashboardUser));
+        return CrudEndpointHandler.run(dashboardUserService::update, user, validationErrors, responseEntityBuilderService);
     }
 
-    @DeleteMapping("/v1/user/{id}")
-    public ResponseEntity<?> delete(@PathVariable int id) {
-        DashboardUserDto user = dashboardUserService.readDetail(id);
-        if (user == null) {
-            List<ErrorDto> error = List.of(ErrorDto.builder().errorMessage("User not found").build());
-            return ResponseEntity.badRequest().body(new ResponseBody<>(ResponseBodyStatusEnum.ERROR, error));
-        }
-        List<DashboardUserDto> responseDashboardUser = List.of(dashboardUserService.delete(user));
-        return ResponseEntity.ok(new ResponseBody<>(ResponseBodyStatusEnum.SUCCESS, responseDashboardUser));
+    @DeleteMapping("/v1/user")
+    public ResponseEntity<?> delete(@Valid @RequestBody DashboardUserReadDto user, Errors validationErrors) {
+        return CrudEndpointHandler.run(dashboardUserService::delete, user, validationErrors, responseEntityBuilderService);
     }
 
-    @GetMapping("/v1/user/{id}")
-    public ResponseEntity<?> readDetail(@PathVariable int id) {
-        DashboardUserDto user = dashboardUserService.readDetail(id);
-        if (user == null) {
-            List<ErrorDto> error = List.of(ErrorDto.builder().errorMessage("User not found").build());
-            return ResponseEntity.badRequest().body(new ResponseBody<>(ResponseBodyStatusEnum.ERROR, error));
-        }
-        List<DashboardUserDto> responseDashboardUser = List.of(user);
-        return ResponseEntity.ok(new ResponseBody<>(ResponseBodyStatusEnum.SUCCESS, responseDashboardUser));
+    @GetMapping("/v1/user")
+    public ResponseEntity<?> readDetail(@Valid @RequestBody DashboardUserReadDto user, Errors validationErrors) {
+        return CrudEndpointHandler.run(dashboardUserService::readDetail, user, validationErrors, responseEntityBuilderService);
     }
 }

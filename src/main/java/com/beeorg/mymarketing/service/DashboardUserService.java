@@ -1,6 +1,7 @@
 package com.beeorg.mymarketing.service;
 
 import com.beeorg.mymarketing.dto.DashboardUserDto;
+import com.beeorg.mymarketing.dto.DashboardUserReadDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +15,7 @@ public interface DashboardUserService {
 
     List<DashboardUserDto> read();
 
-    DashboardUserDto readDetail(int id);
+    DashboardUserDto readDetail(DashboardUserReadDto id);
 
-    DashboardUserDto delete(DashboardUserDto user);
+    DashboardUserDto delete(DashboardUserReadDto user);
 }

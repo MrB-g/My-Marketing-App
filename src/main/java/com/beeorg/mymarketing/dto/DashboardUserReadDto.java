@@ -2,18 +2,18 @@ package com.beeorg.mymarketing.dto;
 
 import com.beeorg.mymarketing.validation.annotation.Exists;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
 
-@EqualsAndHashCode(callSuper = true)
 @Data
-@SuperBuilder
+@Builder
 @NoArgsConstructor
-public class DashboardUserUpdateDto extends DashboardUserDto {
+@AllArgsConstructor
+public class DashboardUserReadDto {
 
     @NotNull(message = "Id is required")
-    @Exists(table = "dashboard_user")
+    @Exists(table = "dashboard_user", message = "Provided user id does not exist")
     private Integer id;
 }

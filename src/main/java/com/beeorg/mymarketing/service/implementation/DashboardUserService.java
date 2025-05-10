@@ -1,6 +1,7 @@
 package com.beeorg.mymarketing.service.implementation;
 
 import com.beeorg.mymarketing.dto.DashboardUserDto;
+import com.beeorg.mymarketing.dto.DashboardUserReadDto;
 import com.beeorg.mymarketing.entity.DashboardUser;
 import com.beeorg.mymarketing.repository.entity.DashboardUserRepository;
 import com.beeorg.mymarketing.service.builder.DashboardUserEntityBuilderService;
@@ -46,15 +47,15 @@ public class DashboardUserService implements com.beeorg.mymarketing.service.Dash
     }
 
     @Override
-    public DashboardUserDto readDetail(int id) {
-        Optional<DashboardUser> optionalUser = dashboardUserRepository.findById(id);
-        return optionalUser.map(dashboardUserEntityBuilderService::reverse).orElse(null);
+    public DashboardUserDto readDetail(DashboardUserReadDto user) {
+        DashboardUser userDetail = dashboardUserRepository.findById(user.getId()).get();
+        return dashboardUserEntityBuilderService.reverse(userDetail);
     }
 
     @Override
-    public DashboardUserDto delete(DashboardUserDto user) {
-        DashboardUser dashboardUser = dashboardUserEntityBuilderService.build(user);
-        dashboardUserRepository.delete(dashboardUser);
-        return user;
+    public DashboardUserDto delete(DashboardUserReadDto user) {
+        DashboardUser deletedUser = dashboardUserRepository.findById(user.getId()).get();
+        dashboardUserRepository.deleteById(user.getId());
+        return dashboardUserEntityBuilderService.reverse(deletedUser);
     }
 }

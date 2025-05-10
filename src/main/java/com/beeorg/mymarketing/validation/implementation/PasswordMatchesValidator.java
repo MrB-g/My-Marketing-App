@@ -47,7 +47,7 @@ public class PasswordMatchesValidator implements ConstraintValidator<PasswordMat
         }
     }
 
-    public static Field getField(Object o, String fieldName) throws NoSuchFieldException {
+    private Field getField(Object o, String fieldName) throws NoSuchFieldException {
         Class<?> clazz = o.getClass();
         while (clazz != null) {
             try {

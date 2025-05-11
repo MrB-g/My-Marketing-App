@@ -1,5 +1,6 @@
 package com.beeorg.mymarketing.controller.api.dashboard;
 
+import com.beeorg.mymarketing.aspect.dashboard.annotation.EnableAuditLog;
 import com.beeorg.mymarketing.dto.DashboardUserDto;
 import com.beeorg.mymarketing.dto.DashboardUserReadDto;
 import com.beeorg.mymarketing.dto.DashboardUserUpdateDto;
@@ -28,21 +29,25 @@ public class DashboardUserController {
     }
 
     @PostMapping("/v1/user")
+    @EnableAuditLog
     public ResponseEntity<?> create(@Valid @RequestBody DashboardUserDto user, Errors validationErrors) {
         return CrudEndpointHandler.run(dashboardUserService::create, user, validationErrors, responseEntityBuilderService);
     }
 
     @PutMapping("/v1/user")
+    @EnableAuditLog
     public ResponseEntity<?> update(@Valid @RequestBody DashboardUserUpdateDto user, Errors validationErrors) {
         return CrudEndpointHandler.run(dashboardUserService::update, user, validationErrors, responseEntityBuilderService);
     }
 
     @DeleteMapping("/v1/user")
+    @EnableAuditLog
     public ResponseEntity<?> delete(@Valid @RequestBody DashboardUserReadDto user, Errors validationErrors) {
         return CrudEndpointHandler.run(dashboardUserService::delete, user, validationErrors, responseEntityBuilderService);
     }
 
     @GetMapping("/v1/user")
+    @EnableAuditLog
     public ResponseEntity<?> readDetail(@Valid @RequestBody DashboardUserReadDto user, Errors validationErrors) {
         return CrudEndpointHandler.run(dashboardUserService::readDetail, user, validationErrors, responseEntityBuilderService);
     }

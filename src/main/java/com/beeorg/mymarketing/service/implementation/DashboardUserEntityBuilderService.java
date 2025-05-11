@@ -1,7 +1,6 @@
 package com.beeorg.mymarketing.service.implementation;
 
 import com.beeorg.mymarketing.dto.DashboardUserDto;
-import com.beeorg.mymarketing.dto.DashboardUserUpdateDto;
 import com.beeorg.mymarketing.entity.DashboardUser;
 import org.springframework.stereotype.Service;
 
@@ -19,12 +18,9 @@ public class DashboardUserEntityBuilderService implements com.beeorg.mymarketing
 
     @Override
     public DashboardUser update(DashboardUserDto requestData, DashboardUser dbData) {
-        return DashboardUser.builder()
-                .id(dbData.getId())
+        return dbData.toBuilder()
                 .loginId(requestData.getLoginId() != null ? requestData.getLoginId() : dbData.getLoginId())
                 .password(requestData.getPassword() != null ? requestData.getPassword() : dbData.getPassword())
-                .createdAt(dbData.getCreatedAt())
-                .createdBy(dbData.getUpdatedBy())
                 .build();
     }
 

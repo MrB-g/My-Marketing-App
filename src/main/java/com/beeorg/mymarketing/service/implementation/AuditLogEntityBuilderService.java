@@ -21,14 +21,8 @@ public class AuditLogEntityBuilderService implements com.beeorg.mymarketing.serv
 
     @Override
     public AuditLog update(AuditLogDto requestData, AuditLog dbData) {
-        return AuditLog.builder()
-                .id(dbData.getId())
-                .originalData(dbData.getOriginalData())
+        return dbData.toBuilder()
                 .modifiedData(requestData.getModifiedData() != null ? requestData.getModifiedData() : dbData.getModifiedData())
-                .performedAt(dbData.getPerformedAt())
-                .endPoint(dbData.getEndPoint())
-                .functionName(dbData.getFunctionName())
-                .performedBy(dbData.getPerformedBy())
                 .build();
     }
 

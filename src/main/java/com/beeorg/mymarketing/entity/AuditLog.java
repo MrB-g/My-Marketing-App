@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-@SuperBuilder
+@SuperBuilder(toBuilder = true)
 @NoArgsConstructor
 @Entity
 @Table(name = "audit_log", schema = "my_marketing")

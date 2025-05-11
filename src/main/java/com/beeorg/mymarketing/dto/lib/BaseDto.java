@@ -7,7 +7,7 @@ import lombok.experimental.SuperBuilder;
 import java.time.LocalDateTime;
 
 @Data
-@SuperBuilder
+@SuperBuilder(toBuilder = true)
 @NoArgsConstructor
 public class BaseDto {
 

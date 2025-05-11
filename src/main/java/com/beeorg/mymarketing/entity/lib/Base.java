@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-@SuperBuilder
+@SuperBuilder(toBuilder = true)
 @NoArgsConstructor
 @MappedSuperclass
 @AttributeOverrides({@AttributeOverride(name = "id", column = @Column(name = "id"))})

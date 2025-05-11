@@ -6,13 +6,15 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
 
 @EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 @Data
-@SuperBuilder
+@SuperBuilder(toBuilder = true)
 @NoArgsConstructor
 public class AuditLogDto extends BaseDto {
 

@@ -40,8 +40,8 @@ public class AuditLogAspect {
             String requestDataJson = objectMapper.writeValueAsString(requestData);
             AuditLogDto auditLogData = extractAuditLogData(joinPoint);
             AuditLogDto savedAuditLogData = auditLogData.toBuilder()
-                    .originalData(requestDataJson)
-                    .modifiedData(responseDataJson)
+                    .requestData(requestDataJson)
+                    .responseData(responseDataJson)
                     .build();
             auditLogService.create(savedAuditLogData);
         }

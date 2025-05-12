@@ -15,7 +15,7 @@ public interface DashboardUserService {
 
     List<DashboardUserDto> read();
 
-    DashboardUserDto readDetail(DashboardUserReadDto id);
+    DashboardUserDto readDetail(DashboardUserReadDto user);
 
     DashboardUserDto delete(DashboardUserReadDto user);
 }

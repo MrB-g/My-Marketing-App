@@ -4,10 +4,10 @@ import com.beeorg.mymarketing.dto.AuditLogDto;
 import com.beeorg.mymarketing.entity.AuditLog;
 import com.beeorg.mymarketing.repository.entity.AuditLogRepository;
 import com.beeorg.mymarketing.service.builder.AuditLogEntityBuilderService;
+import com.beeorg.mymarketing.service.handler.CrudServiceHandler;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class AuditLogService implements com.beeorg.mymarketing.service.AuditLogService {
@@ -26,28 +26,39 @@ public class AuditLogService implements com.beeorg.mymarketing.service.AuditLogS
 
     @Override
     public AuditLogDto create(AuditLogDto audit) {
-        AuditLog auditLogEntity = auditLogEntityBuilderService.build(audit);
-        AuditLog savedAuditLogEntity = auditLogRepository.save(auditLogEntity);
-        return auditLogEntityBuilderService.reverse(savedAuditLogEntity);
+        return CrudServiceHandler.save(
+                audit,
+                auditLogEntityBuilderService::build,
+                auditLogRepository::save,
+                auditLogEntityBuilderService::reverse
+        );
     }
 
     @Override
     public AuditLogDto update(AuditLogDto audit) {
-        AuditLog dbAuditLog = auditLogRepository.findById(audit.getId()).get();
-        AuditLog requestAuditLog = auditLogEntityBuilderService.update(audit, dbAuditLog);
-        AuditLog updatedAuditLog = auditLogRepository.save(requestAuditLog);
-        return auditLogEntityBuilderService.reverse(updatedAuditLog);
+        return CrudServiceHandler.update(
+                audit,
+                auditLogEntityBuilderService::update,
+                auditLogRepository::save,
+                auditLogEntityBuilderService::reverse
+        );
     }
 
     @Override
     public List<AuditLogDto> read() {
-        List<AuditLog> auditLogs = auditLogRepository.findAll();
-        return auditLogs.stream().map(auditLogEntityBuilderService::reverse).toList();
+        return CrudServiceHandler.read(
+                auditLogRepository::findAll,
+                auditLogEntityBuilderService::reverse
+        );
     }
 
     @Override
     public AuditLogDto readDetail(int id) {
-        Optional<AuditLog> audit = auditLogRepository.findById(id);
-        return audit.map(auditLogEntityBuilderService::reverse).orElse(null);
+        return CrudServiceHandler.readDetail(
+                id,
+                auditLogRepository::findById,
+                AuditLog::new,
+                auditLogEntityBuilderService::reverse
+        );
     }
 }

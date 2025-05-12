@@ -2,10 +2,17 @@ package com.beeorg.mymarketing.service.implementation;
 
 import com.beeorg.mymarketing.dto.AuditLogDto;
 import com.beeorg.mymarketing.entity.AuditLog;
+import com.beeorg.mymarketing.repository.entity.AuditLogRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AuditLogEntityBuilderService implements com.beeorg.mymarketing.service.builder.AuditLogEntityBuilderService {
+
+    private final AuditLogRepository auditLogRepository;
+
+    public AuditLogEntityBuilderService(AuditLogRepository auditLogRepository) {
+        this.auditLogRepository = auditLogRepository;
+    }
 
     @Override
     public AuditLog build(AuditLogDto audit) {
@@ -20,9 +27,10 @@ public class AuditLogEntityBuilderService implements com.beeorg.mymarketing.serv
     }
 
     @Override
-    public AuditLog update(AuditLogDto requestData, AuditLog dbData) {
-        return dbData.toBuilder()
-                .responseData(requestData.getResponseData() != null ? requestData.getResponseData() : dbData.getResponseData())
+    public AuditLog update(AuditLogDto requestData) {
+        AuditLog dbAudit = auditLogRepository.findById(requestData.getId()).orElse(new AuditLog());
+        return dbAudit.toBuilder()
+                .responseData(requestData.getResponseData() != null ? requestData.getResponseData() : dbAudit.getResponseData())
                 .build();
     }
 

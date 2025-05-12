@@ -13,7 +13,7 @@ import java.util.Set;
 
 @Getter
 @Setter
-@SuperBuilder
+@SuperBuilder(toBuilder = true)
 @NoArgsConstructor
 @Entity
 @Table(name = "point_tier", schema = "my_marketing")

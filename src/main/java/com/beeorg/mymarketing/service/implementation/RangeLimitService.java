@@ -7,6 +7,7 @@ import com.beeorg.mymarketing.service.builder.RangeLimitEntityBuilderService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class RangeLimitService implements com.beeorg.mymarketing.service.RangeLimitService {
@@ -36,6 +37,15 @@ public class RangeLimitService implements com.beeorg.mymarketing.service.RangeLi
             return false;
         }
         return fromRangeLimitEntity.getValidity().equals("FROM");
+    }
+
+    @Override
+    public Optional<RangeLimitDto> getRangeLimitById(int id) {
+        Optional<RangeLimit> rangeLimitEntity = rangeLimitRepository.findById(id);
+        if (rangeLimitEntity.isPresent()) {
+            return rangeLimitEntity.map(rangeLimitEntityBuilderService::reverse);
+        }
+        return Optional.empty();
     }
 
     @Override

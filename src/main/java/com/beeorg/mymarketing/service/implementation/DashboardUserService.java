@@ -5,10 +5,10 @@ import com.beeorg.mymarketing.dto.DashboardUserReadDto;
 import com.beeorg.mymarketing.entity.DashboardUser;
 import com.beeorg.mymarketing.repository.entity.DashboardUserRepository;
 import com.beeorg.mymarketing.service.builder.DashboardUserEntityBuilderService;
+import com.beeorg.mymarketing.service.handler.CrudServiceHandler;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class DashboardUserService implements com.beeorg.mymarketing.service.DashboardUserService {
@@ -27,35 +27,50 @@ public class DashboardUserService implements com.beeorg.mymarketing.service.Dash
 
     @Override
     public DashboardUserDto create(DashboardUserDto user) {
-        DashboardUser dashboardUser = dashboardUserEntityBuilderService.build(user);
-        DashboardUser savedUser = dashboardUserRepository.save(dashboardUser);
-        return dashboardUserEntityBuilderService.reverse(savedUser);
+        return CrudServiceHandler.save(
+                user,
+                dashboardUserEntityBuilderService::build,
+                dashboardUserRepository::save,
+                dashboardUserEntityBuilderService::reverse
+        );
     }
 
     @Override
     public DashboardUserDto update(DashboardUserDto user) {
-        DashboardUser dbUser = dashboardUserRepository.findById(user.getId()).get();
-        DashboardUser requestUser = dashboardUserEntityBuilderService.update(user, dbUser);
-        DashboardUser updateUser = dashboardUserRepository.save(requestUser);
-        return dashboardUserEntityBuilderService.reverse(updateUser);
+        return CrudServiceHandler.update(
+                user,
+                dashboardUserEntityBuilderService::update,
+                dashboardUserRepository::save,
+                dashboardUserEntityBuilderService::reverse
+        );
     }
 
     @Override
     public List<DashboardUserDto> read() {
-        List<DashboardUser> dashboardUsers = dashboardUserRepository.findAll();
-        return dashboardUsers.stream().map(dashboardUserEntityBuilderService::reverse).toList();
+        return CrudServiceHandler.read(
+                dashboardUserRepository::findAll,
+                dashboardUserEntityBuilderService::reverse
+        );
     }
 
     @Override
     public DashboardUserDto readDetail(DashboardUserReadDto user) {
-        DashboardUser userDetail = dashboardUserRepository.findById(user.getId()).get();
-        return dashboardUserEntityBuilderService.reverse(userDetail);
+        return CrudServiceHandler.readDetail(
+                user.getId(),
+                dashboardUserRepository::findById,
+                DashboardUser::new,
+                dashboardUserEntityBuilderService::reverse
+        );
     }
 
     @Override
     public DashboardUserDto delete(DashboardUserReadDto user) {
-        DashboardUser deletedUser = dashboardUserRepository.findById(user.getId()).get();
-        dashboardUserRepository.deleteById(user.getId());
-        return dashboardUserEntityBuilderService.reverse(deletedUser);
+        return CrudServiceHandler.delete (
+                user.getId(),
+                dashboardUserRepository::findById,
+                DashboardUser::new,
+                dashboardUserRepository::deleteById,
+                dashboardUserEntityBuilderService::reverse
+        );
     }
 }

@@ -13,9 +13,9 @@ import lombok.experimental.SuperBuilder;
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class DashboardUserUpdateDto extends DashboardUserDto {
+public class PointTierUpdateDto extends PointTierDto {
 
     @NotNull(message = "Id is required")
-    @Exists(table = "dashboard_user", message = "Provided user id does not exist")
+    @Exists(table = "point_tier", message = "Provided point tier id does not exist")
     private Integer id;
 }

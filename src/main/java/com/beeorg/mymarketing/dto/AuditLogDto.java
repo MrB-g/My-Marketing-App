@@ -18,9 +18,9 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class AuditLogDto extends BaseDto {
 
-    private String originalData;
+    private String requestData;
 
-    private String modifiedData;
+    private String responseData;
 
     private LocalDateTime performedAt;
 

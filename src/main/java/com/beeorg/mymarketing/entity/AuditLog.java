@@ -19,11 +19,11 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "audit_log", schema = "my_marketing")
 public class AuditLog extends PrimaryKey {
-    @Column(name = "original_data")
-    private String originalData;
+    @Column(name = "request_data")
+    private String requestData;
 
-    @Column(name = "modified_data")
-    private String modifiedData;
+    @Column(name = "response_data")
+    private String responseData;
 
     @NotNull
     @Column(name = "performed_at", nullable = false, updatable = false)

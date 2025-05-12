@@ -10,8 +10,8 @@ public class AuditLogEntityBuilderService implements com.beeorg.mymarketing.serv
     @Override
     public AuditLog build(AuditLogDto audit) {
         return AuditLog.builder()
-                .originalData(audit.getOriginalData())
-                .modifiedData(audit.getModifiedData())
+                .requestData(audit.getRequestData())
+                .responseData(audit.getResponseData())
                 .performedAt(audit.getPerformedAt())
                 .endPoint(audit.getEndPoint())
                 .functionName(audit.getFunctionName())
@@ -22,15 +22,15 @@ public class AuditLogEntityBuilderService implements com.beeorg.mymarketing.serv
     @Override
     public AuditLog update(AuditLogDto requestData, AuditLog dbData) {
         return dbData.toBuilder()
-                .modifiedData(requestData.getModifiedData() != null ? requestData.getModifiedData() : dbData.getModifiedData())
+                .responseData(requestData.getResponseData() != null ? requestData.getResponseData() : dbData.getResponseData())
                 .build();
     }
 
     @Override
     public AuditLogDto reverse(AuditLog audit) {
         return AuditLogDto.builder()
-                .originalData(audit.getOriginalData())
-                .modifiedData(audit.getModifiedData())
+                .requestData(audit.getRequestData())
+                .responseData(audit.getResponseData())
                 .performedAt(audit.getPerformedAt())
                 .endPoint(audit.getEndPoint())
                 .functionName(audit.getFunctionName())
